@@ -1,0 +1,84 @@
+<!--form #editForm="ngForm" (ngSubmit)="editParkingSpot(parkingSpotId.value, editForm)">
+    <div>
+        <input type="text" id="parkingSpotId" name="parkingSpotId" #parkingSpotId placeholder="Parking spot ID">
+    </div>
+    <div>
+        <input ngModel name="parkingSpotNumber" placeholder="Parking spot number">
+        <input ngModel name="licensePlate" placeholder="License plate">
+    </div>
+    <div>
+        <input ngModel name="brandCar" placeholder="Car brand">
+        <input ngModel name="modelCar" placeholder="Car model">
+    </div>
+    <div>
+        <input ngModel name="colorCar" placeholder="Car color">
+        <input ngModel name="responsibleName" placeholder="Responsible Name">
+    </div>
+    <div>
+        <input ngModel name="apartment" placeholder="Apartment">
+        <input ngModel name="block" placeholder="Block">
+    </div>
+    <div>
+        <button type="submit">Update</button>
+    </div>
+</form-->
+<form #editForm="ngForm" (ngSubmit)="editParkingSpot(parkingSpotId.value, editForm)" class="formInput" >
+    <div class="idInput dds__px-4">
+        <div class="dds__form-group">
+            <label>Parking Spot ID</label>
+            <input type="text" class="dds__form-control" placeholder="ex: f6fd5f84-14e2-11ed-861d-0242ac120002" maxlength="36" id="parkingSpotId" name="parkingSpotId" #parkingSpotId/>
+        </div>
+    </div>
+    <div class="inputEdit dds__px-4">
+        <div class="dds__form-group">
+            <label>Parking Spot Number</label>
+            <input type="text" class="dds__form-control" placeholder="ex: T1234" maxlength="6" ngModel name="parkingSpotNumber"/>
+        </div>
+    </div>
+    <div class="inputEdit dds__px-4">
+        <div class="dds__form-group">
+            <label>License Plate</label>
+            <input type="text" class="dds__form-control" placeholder="ex: ABC1234" maxlength="8" ngModel name="licensePlate"/>
+        </div>
+    </div>
+    <div class="inputEdit dds__px-4">
+        <div class="dds__form-group">
+            <label>Responsible Name</label>
+            <input type="text" class="dds__form-control" placeholder="ex: Jane Doe" maxlength="50" ngModel name="responsibleName"/>
+        </div>
+    </div>
+    <div class="inputEdit dds__px-4">
+        <div class="dds__form-group">
+            <label>Car Brand</label>
+            <input type="text" class="dds__form-control" placeholder="ex: Renault" maxlength="50" ngModel name="brandCar"/>
+        </div>
+    </div>
+    <div class="inputEdit dds__px-4">
+        <div class="dds__form-group">
+            <label>Apartment</label>
+            <input type="text" class="dds__form-control" placeholder="ex: 234" maxlength="4" ngModel name="apartment"/>
+        </div>
+    </div>
+    <div class="inputEdit dds__px-4">
+        <div class="dds__form-group">
+            <label>Car Model</label>
+            <input type="text" class="dds__form-control" placeholder="ex: Clio" maxlength="50" ngModel name="modelCar"/>
+        </div>
+    </div>
+    <div class="inputEdit dds__px-4">
+        <div class="dds__form-group">
+            <label>Block</label>
+            <input type="text" class="dds__form-control" placeholder="ex: T1" maxlength="2" ngModel name="block"/>
+        </div>
+    </div>
+    <div class="inputEdit dds__px-4">
+        <div class="dds__form-group">
+            <label>Car Color</label>
+            <input type="text" class="dds__form-control" placeholder="ex: White" maxlength="50" ngModel name="colorCar"/>
+        </div>
+    </div>
+    <div class="dds__px-4">
+        <button role="button" type="submit" class="dds__btn dds__btn-primary dds__text-truncate">Update</button>
+        <button role="button" type="button" class="dds__btn dds__btn-secondary dds__text-truncate dds__ml-3" routerLink="/showAll">Cancel</button>
+    </div>
+</form>

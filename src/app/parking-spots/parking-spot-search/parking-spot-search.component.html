@@ -1,0 +1,37 @@
+<div class="idInput dds__px-4">
+    <div class="dds__form-group">
+        <label>Parking Spot ID</label>
+        <input type="text" class="dds__form-control" placeholder="ex: f6fd5f84-14e2-11ed-861d-0242ac120002" maxlength="36" id="parkingSpotId" name="parkingSpotId" #parkingSpotId/>
+    </div>
+</div>  
+<div class="dds__px-4">
+    <button role="button" type="submit" class="dds__btn dds__btn-primary dds__text-truncate" (click)="getOneParkingSpot(parkingSpotId.value)">Search</button>
+    <button role="button" type="button" class="dds__btn dds__btn-secondary dds__text-truncate dds__ml-3" routerLink="/showAll">Back</button>
+</div>
+
+<div class="getTable">
+    <table class="dds__table dds__table-hover dds__table-responsive-lg dds__mt-4 dds__px-4">
+        <thead>
+            <tr>
+            <th scope="col">Parking Spot</th>
+            <th scope="col">License Plate</th>
+            <th scope="col">Car Brand</th>
+            <th scope="col">Car Model</th>
+            <th scope="col">Responsible Name</th>
+            <th scope="col">Apartment</th>
+            <th scope="col">Block</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <th scope="row">{{ parkingSpots.parkingSpotNumber }}</th>
+            <td>{{ parkingSpots.licensePlate }}</td>
+            <td tabindex="-1">{{ parkingSpots.brandCar }}</td>
+            <td>{{ parkingSpots.modelCar }}</td>
+            <td>{{ parkingSpots.responsibleName }}</td>
+            <td>{{ parkingSpots.apartment }}</td>
+            <td>{{ parkingSpots.block }}</td>
+            </tr>
+        </tbody>
+    </table>    
+</div>

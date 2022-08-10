@@ -1,0 +1,10 @@
+<div class="idInput dds__px-4">
+    <div class="dds__form-group">
+        <label>Parking Spot ID</label>
+        <input type="text" class="dds__form-control" placeholder="ex: f6fd5f84-14e2-11ed-861d-0242ac120002" maxlength="36" name="parkingSpotId" #parkingSpotId/>
+    </div>
+</div>  
+<div class="dds__px-4">
+    <button role="button" type="submit" class="dds__btn dds__btn-primary dds__text-truncate" (click)="deleteParkingSpot(parkingSpotId.value)">Delete</button>
+    <button role="button" type="button" class="dds__btn dds__btn-secondary dds__text-truncate dds__ml-3" routerLink="/showAll">Cancel</button>
+</div>

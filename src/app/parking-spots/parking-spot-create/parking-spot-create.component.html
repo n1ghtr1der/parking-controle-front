@@ -1,0 +1,54 @@
+<form #createForm="ngForm" (ngSubmit)="newParkingSpot(createForm)" class="formInput" >
+    <div class="inputEdit dds__px-4">
+        <div class="dds__form-group">
+            <label>Parking Spot Number</label>
+            <input type="text" class="dds__form-control" placeholder="ex: T1234" maxlength="6" ngModel name="parkingSpotNumber"/>
+        </div>
+    </div>
+    <div class="inputEdit dds__px-4">
+        <div class="dds__form-group">
+            <label>License Plate</label>
+            <input type="text" class="dds__form-control" placeholder="ex: ABC1234" maxlength="8" ngModel name="licensePlate"/>
+        </div>
+    </div>
+    <div class="inputEdit dds__px-4">
+        <div class="dds__form-group">
+            <label>Responsible Name</label>
+            <input type="text" class="dds__form-control" placeholder="ex: Jane Doe" maxlength="50" ngModel name="responsibleName"/>
+        </div>
+    </div>
+    <div class="inputEdit dds__px-4">
+        <div class="dds__form-group">
+            <label>Car Brand</label>
+            <input type="text" class="dds__form-control" placeholder="ex: Renault" maxlength="50" ngModel name="brandCar"/>
+        </div>
+    </div>
+    <div class="inputEdit dds__px-4">
+        <div class="dds__form-group">
+            <label>Apartment</label>
+            <input type="text" class="dds__form-control" placeholder="ex: 234" maxlength="4" ngModel name="apartment"/>
+        </div>
+    </div>
+    <div class="inputEdit dds__px-4">
+        <div class="dds__form-group">
+            <label>Car Model</label>
+            <input type="text" class="dds__form-control" placeholder="ex: Clio" maxlength="50" ngModel name="modelCar"/>
+        </div>
+    </div>
+    <div class="inputEdit dds__px-4">
+        <div class="dds__form-group">
+            <label>Block</label>
+            <input type="text" class="dds__form-control" placeholder="ex: T1" maxlength="2" ngModel name="block"/>
+        </div>
+    </div>
+    <div class="inputEdit dds__px-4">
+        <div class="dds__form-group">
+            <label>Car Color</label>
+            <input type="text" class="dds__form-control" placeholder="ex: White" maxlength="50" ngModel name="colorCar"/>
+        </div>
+    </div>
+    <div class="dds__px-4">
+        <button role="button" type="submit" class="dds__btn dds__btn-primary dds__text-truncate">Submit</button>
+        <button role="button" type="button" class="dds__btn dds__btn-secondary dds__text-truncate dds__ml-3" routerLink="/showAll">Cancel</button>
+    </div>
+</form>

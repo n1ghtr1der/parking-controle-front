@@ -1,0 +1,33 @@
+<div class="getTable">
+    <table class="dds__table dds__table-hover dds__table-responsive-lg dds__mt-4">
+        <thead>
+            <tr>
+            <th scope="col">Parking Spot</th>
+            <th scope="col">License Plate</th>
+            <th scope="col">Car Brand</th>
+            <th scope="col">Car Model</th>
+            <th scope="col">Responsible Name</th>
+            <th scope="col">Apartment</th>
+            <th scope="col">Block</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of parkingSpots">
+            <tr>
+            <th scope="row">{{ item.parkingSpotNumber }}</th>
+            <td>{{ item.licensePlate }}</td>
+            <td tabindex="-1">{{ item.brandCar }}</td>
+            <td>{{ item.modelCar }}</td>
+            <td>{{ item.responsibleName }}</td>
+            <td>{{ item.apartment }}</td>
+            <td>{{ item.block }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="buttons">
+    <button role="button" type="button" class="dds__btn dds__btn-purchase dds__text-truncate" routerLink="/create">Create</button>
+    <button role="button" type="button" class="dds__btn dds__btn-primary dds__text-truncate dds__ml-3" routerLink="/update">Edit</button>
+    <button role="button" type="button" class="dds__btn dds__btn-primary dds__text-truncate dds__ml-3" routerLink="/search">Search</button>
+    <button role="button" type="button" class="dds__btn dds__btn-primary dds__text-truncate dds__ml-3" id="deleteBtn" routerLink="/delete">Delete</button>
+</div>
